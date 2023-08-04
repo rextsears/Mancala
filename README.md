@@ -1,10 +1,10 @@
 # Mancala
 
-# Overview
+## Overview
 
 Mancala is a two player board game, dating back as far as Ancient Egypt, in which players use turn-based strategy to capture all of the stones of their opponent. This program takes the age-old game into the digital world, giving players the full functionality of the physical game, with a modern twist on the gameboard aesthetics.
 
-# User Stories
+## User Stories
 
 As a user, I want the ability to load the game.
 As a user, I want the ability to have the application load with a new game by default.
