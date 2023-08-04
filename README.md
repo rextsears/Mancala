@@ -17,3 +17,10 @@ Mancala is a two player board game, dating back as far as Ancient Egypt, in whic
     - As a user, I want the ability to have the winning player announced if a win is identified.
     - As a user, I want the ability to have the tie game announced if a tie game is identified.
     - As a user, I want the ability to have the ability to start a new game from a button in the application once a winner or tie game is identified.
+
+
+## Wire Frames
+
+![Game_board](Wireframes/Game_board.png)
+![Player_1_game_flow](Wireframes/Player_1_game_flow.png)
+![Player_2_game_flow](Player_2_game_flow.png)
