@@ -23,4 +23,4 @@ Mancala is a two player board game, dating back as far as Ancient Egypt, in whic
 
 ![Game_board](Wireframes/Game_board.png)
 ![Player_1_game_flow](Wireframes/Player_1_game_flow.png)
-![Player_2_game_flow](Player_2_game_flow.png)
+![Player_2_game_flow](Wireframes/Player_2_game_flow.png)
