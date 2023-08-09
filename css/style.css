@@ -33,7 +33,22 @@
     font-family: "Lucida Console", "Courier New", monospace;
   }
 
-#gameboard {
+  #playerz {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #player1 {
+    background-color: #d4ff32;
+    margin: 0 450px 0 0;
+  }
+
+  #player2 {
+    background-color: #ff901f;
+    margin: 0 0 0 450px;
+  }
+  
+  #gameboard {
     display: grid;
     width: 1200px;
     justify-content: center;
@@ -47,7 +62,7 @@
     border: 10px solid #d4ff32;
   }
   
-.stdhole {
+  .stdhole {
     margin: 20px;
     background-color: #133e7c;
     border: 3px dashed #00fff9;
@@ -117,13 +132,13 @@
     border: 5px solid #ff2975;
     border-radius: 25%;
   }
-
+  
   #newgamebutton {
     font-family: "Lucida Console", "Courier New", monospace;
     font-size: 25px;
-    background-color: #d4ff32;
+    background-color: #ff901f;
     border: 2px solid #d4ff32;
     margin-top: 30px;
-    color: #ff2975;
+    color: #8c1eff;
     outline: none;
   }
