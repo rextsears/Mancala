@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    font-family: "PT Sans", Calibri, Tahoma, sans-serif;
+  }
+
+  body {
+    height: auto;
+    width: auto;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(Images/DXCVII.jpg);
+    background-size: cover;
+    background-color: #091833;
+  }
+  
+  h1 {
+    font-size: 150px;
+    padding: 0 0 0 0;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #titlediv {
+    font-size: 90px;
+    color: #8c1eff;
+    background-color: #ff901f;
+    padding: 0 15px 0 15px;
+    font-family: "Lucida Console", "Courier New", monospace;
+  }
+
+#gameboard {
+    display: grid;
+    width: 1200px;
+    justify-content: center;
+    grid-template-columns: repeat(8, 150px);
+    grid-template-rows: repeat(2, 150px);
+    grid-template-areas:
+    "end2 hole6 hole5 hole4 hole3 hole2 hole1 end1"
+    "end2 hole7 hole8 hole9 hole10 hole11 hole12 end1";
+    background-color: #091833;
+    border-radius: 55px;
+    border: 10px solid #d4ff32;
+  }
+  
+.stdhole {
+    margin: 20px;
+    background-color: #133e7c;
+    border: 3px dashed #00fff9;
+    border-radius: 50%;
+}
+
+#hole-1 {
+    grid-area: hole1;
+} 
+
+#hole-2 {
+    grid-area: hole2;
+} 
+
+#hole-3 {
+    grid-area: hole3;
+} 
+
+#hole-4 {
+    grid-area: hole4;
+} 
+
+#hole-5 {
+    grid-area: hole5;
+} 
+
+#hole-6 {
+    grid-area: hole6;
+} 
+
+#hole-7 {
+    grid-area: hole7;
+} 
+
+#hole-8 {
+    grid-area: hole8;
+} 
+
+#hole-9 {
+    grid-area: hole9;
+} 
+
+#hole-10 {
+    grid-area: hole10;
+} 
+
+#hole-11 {
+    grid-area: hole11;
+} 
+
+#hole-12 {
+    grid-area: hole12;
+} 
+
+#player-1-container {
+    grid-area: end1;
+    margin: 25px;
+    background-color: #133e7c;
+    border: 5px solid #ff2975;
+    border-radius: 25%;
+  }
+
+#player-2-container {
+    grid-area: end2;
+    margin: 25px;
+    background-color: #133e7c;
+    border: 5px solid #ff2975;
+    border-radius: 25%;
+  }
+
+  #newgamebutton {
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 25px;
+    background-color: #d4ff32;
+    border: 2px solid #d4ff32;
+    margin-top: 30px;
+    color: #ff2975;
+    outline: none;
+  }
