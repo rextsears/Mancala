@@ -8,6 +8,7 @@ let gameWinner;
 /*----- cached element references -----*/
 let messagecenter = document.getElementById("messagecenter");
 let freshpage = document.getElementById("freshpage");
+let messages = document.getElementById("messages");
 let scorep1 = document.getElementById("p1score");
 let scorep2 = document.getElementById("p2score");
 let hole1 = document.getElementById("hole-1");
@@ -25,6 +26,8 @@ let hole12 = document.getElementById("hole-12");
 let player1container = document.getElementById("player-1-container");
 let player2container = document.getElementById("player-2-container");
 let newgamebutton = document.getElementById("newgamebutton");
+//let player1holesCSS = document.getElementByClassName("stdholep1");
+//let player1holes = (hole7, hole8, hole9, hole10, hole11, hole12);
 
   
 /*----- event listeners -----*/
@@ -53,17 +56,17 @@ let hole5Click = hole5.addEventListener('click', function(){
 
 
 let hole6Click = hole6.addEventListener('click', function(){
-
+player2Turn();
 });
 
 
 let hole7Click = hole7.addEventListener('click', function(){
-
+player1Turn();
 });
 
 
 let hole8Click = hole8.addEventListener('click', function(){
-
+turnReset();
 });
 
 
@@ -89,6 +92,7 @@ let hole12Click = hole12.addEventListener('click', function(){
 let newgameClick = newgamebutton.addEventListener('click', function(){
 cleanSlate();
 holeNumRend(boardHoles);
+mcClearNewGameMessage();
 });
 
 /*----- functions -----*/
@@ -96,10 +100,9 @@ holeNumRend(boardHoles);
 function cleanSlate() {
 boardHoles = [4,4,4,4,4,4,0,4,4,4,4,4,4,0];
 gameWinner = null;
-mcNewGameStart();
+turnReset();
+player1Turn();
 return boardHoles, gameWinner;
-
-
 };
 
 // Scoreboard
@@ -122,7 +125,59 @@ function keepingScore(x,y) {
 
 
 // Change active player (change turns)
+function player1Turn() {
+    mcDisplay("Player 1's Turn");
+    hole7.style.border = '7px solid #ff2975';
+    hole8.style.border = '7px solid #ff2975';
+    hole9.style.border = '7px solid #ff2975';
+    hole10.style.border = '7px solid #ff2975';
+    hole11.style.border = '7px solid #ff2975';
+    hole12.style.border = '7px solid #ff2975';
+    hole1.style.border = '3px dashed #00fff9';
+    hole2.style.border = '3px dashed #00fff9';
+    hole3.style.border = '3px dashed #00fff9';
+    hole4.style.border = '3px dashed #00fff9';
+    hole5.style.border = '3px dashed #00fff9';
+    hole6.style.border = '3px dashed #00fff9';
+    player1container.style.background = '#ff2975';
+    player2container.style.background = '#133e7c';
+};
 
+function player2Turn() {
+    mcDisplay("Player 2's Turn");
+    hole1.style.border = '7px solid #00fff9';
+    hole2.style.border = '7px solid #00fff9';
+    hole3.style.border = '7px solid #00fff9';
+    hole4.style.border = '7px solid #00fff9';
+    hole5.style.border = '7px solid #00fff9';
+    hole6.style.border = '7px solid #00fff9';
+    hole7.style.border = '3px dashed #00fff9';
+    hole8.style.border = '3px dashed #00fff9';
+    hole9.style.border = '3px dashed #00fff9';
+    hole10.style.border = '3px dashed #00fff9';
+    hole11.style.border = '3px dashed #00fff9';
+    hole12.style.border = '3px dashed #00fff9';
+    player1container.style.background = '#133e7c';
+    player2container.style.background = '#00fff9';
+}
+
+function turnReset() {
+    mcDisplay("");
+    hole1.style.border = '3px dashed #00fff9';
+    hole2.style.border = '3px dashed #00fff9';
+    hole3.style.border = '3px dashed #00fff9';
+    hole4.style.border = '3px dashed #00fff9';
+    hole5.style.border = '3px dashed #00fff9';
+    hole6.style.border = '3px dashed #00fff9';
+    hole7.style.border = '3px dashed #00fff9';
+    hole8.style.border = '3px dashed #00fff9';
+    hole9.style.border = '3px dashed #00fff9';
+    hole10.style.border = '3px dashed #00fff9';
+    hole11.style.border = '3px dashed #00fff9';
+    hole12.style.border = '3px dashed #00fff9';
+    player1container.style.background = '#133e7c';
+    player2container.style.background = '#133e7c';
+}
 
 // Calculate a winner
 
@@ -148,6 +203,10 @@ function holeNumRend(v) {
         player2container.innerHTML = v[13];
 };
 
-function mcNewGameStart() {
+function mcClearNewGameMessage() {
     messagecenter.removeChild(freshpage);
 };
+
+function mcDisplay(message) {
+    messages.innerHTML= message;
+}

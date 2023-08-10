@@ -48,12 +48,12 @@
   }
 
   #player1 {
-    background-color: #d4ff32;
+    background-color: #ff2975;
     margin: 0 450px 0 0;
   }
 
   #player2 {
-    background-color: #ff901f;
+    background-color: #00fff9;
     margin: 0 0 0 450px;
   }
   
@@ -131,64 +131,37 @@
     text-align: center;
 } 
 
+.stdholep1 {
+  border: 3px dashed #00fff9;
+  margin: 20px;
+  background-color: #133e7c;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+}
+
 #hole-7 {
     grid-area: hole7;
-    margin: 20px;
-    background-color: #133e7c;
-    border: 3px dashed #00fff9;
-    border-radius: 50%;
-    color: white;
-    text-align: center;
 } 
 
 #hole-8 {
     grid-area: hole8;
-    margin: 20px;
-    background-color: #133e7c;
-    border: 3px dashed #00fff9;
-    border-radius: 50%;
-    color: white;
-    text-align: center;
 } 
 
 #hole-9 {
     grid-area: hole9;
-    margin: 20px;
-    background-color: #133e7c;
-    border: 3px dashed #00fff9;
-    border-radius: 50%;
-    color: white;
-    text-align: center;
 } 
 
 #hole-10 {
     grid-area: hole10;
-    margin: 20px;
-    background-color: #133e7c;
-    border: 3px dashed #00fff9;
-    border-radius: 50%;
-    color: white;
-    text-align: center;
 } 
 
 #hole-11 {
     grid-area: hole11;
-    margin: 20px;
-    background-color: #133e7c;
-    border: 3px dashed #00fff9;
-    border-radius: 50%;
-    color: white;
-    text-align: center;
 } 
 
 #hole-12 {
     grid-area: hole12;
-    margin: 20px;
-    background-color: #133e7c;
-    border: 3px dashed #00fff9;
-    border-radius: 50%;
-    color: white;
-    text-align: center;
 } 
 
 #player-1-container {
@@ -205,7 +178,7 @@
     grid-area: end2;
     margin: 25px;
     background-color: #133e7c;
-    border: 5px solid #ff2975;
+    border: 5px solid #00fff9;
     border-radius: 25%;
     color: white;
     text-align: center;
