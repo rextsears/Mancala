@@ -99,10 +99,20 @@ let hole12Click = hole12.addEventListener('click', function(){
 });
  
 let newgameClick = newgamebutton.addEventListener('click', function(){
-cleanSlate();
-holeNumRend(boardHoles);
-mcClearNewGameMessage();
+    cleanSlate();
+    holeNumRend(boardHoles);
+    mcClearNewGameMessage();
 });
+//test functions //
+let player1test = player1container.addEventListener('click', function(){
+    turnReset();
+    player1Turn();
+    });
+
+let player2test = player2container.addEventListener('click', function(){
+    turnReset();
+    player2Turn();
+    });
 
 /*----- functions -----*/
 // New Game
@@ -133,12 +143,9 @@ function playMancala(arr, index) {
         arr[i]++;
         remainingValue--;
     }
-    for (let i = index - 1; i >= 0 && remainingValue > 0; i--) {
-        arr[i]--;
-        remainingValue--;
-    }
 
-    return boardHoles = arr;
+    boardholes = arr;
+    return boardHoles;
 }
 
 // Play behavior when player is on home side
