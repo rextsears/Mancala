@@ -4,6 +4,8 @@
 let boardHoles = [];
 let activePlayer;
 let gameWinner;
+let mancalaRender;
+let playIndex;
   
 /*----- cached element references -----*/
 let messagecenter = document.getElementById("messagecenter");
@@ -30,72 +32,120 @@ let newgamebutton = document.getElementById("newgamebutton");
   
 /*----- event listeners -----*/
 let hole1Click = hole1.addEventListener('click', function(){
-    playMancala(boardHoles,7);
-    holeNumRend(boardHoles);
+    if (activePlayer = 2) {
+    mancalaRender = playMancala(boardHoles,7);
+    holeNumRend(mancalaRender.board);
+    checkTurn(mancalaRender.stoppedIndex,activePlayer);
+    changeTurn(activePlayer);
+    };
 });
  
 let hole2Click = hole2.addEventListener('click', function(){
-    playMancala(boardHoles,8);
-    holeNumRend(boardHoles);
+    if (activePlayer === 2) {
+    mancalaRender = playMancala(boardHoles,8);
+    holeNumRend(mancalaRender.board);
+    checkTurn(mancalaRender.stoppedIndex,activePlayer);
+    changeTurn(activePlayer);
+    };
 });
 
 
 let hole3Click = hole3.addEventListener('click', function(){
-    playMancala(boardHoles,9);
-    holeNumRend(boardHoles);
+    if (activePlayer === 2) {
+    mancalaRender = playMancala(boardHoles,9);
+    holeNumRend(mancalaRender.board);
+    checkTurn(mancalaRender.stoppedIndex,activePlayer);
+    changeTurn(activePlayer);
+    };
 });
 
 
 let hole4Click = hole4.addEventListener('click', function(){
-    playMancala(boardHoles,10);
-    holeNumRend(boardHoles);
+    if (activePlayer === 2) {
+    mancalaRender = playMancala(boardHoles,10);
+    holeNumRend(mancalaRender.board);
+    checkTurn(mancalaRender.stoppedIndex,activePlayer);
+    changeTurn(activePlayer);
+    };
 });
 
 
 let hole5Click = hole5.addEventListener('click', function(){
-    playMancala(boardHoles,11);
-    holeNumRend(boardHoles);
+    if (activePlayer === 2) {
+    mancalaRender = playMancala(boardHoles,11);
+    holeNumRend(mancalaRender.board);
+    checkTurn(mancalaRender.stoppedIndex,activePlayer);
+    changeTurn(activePlayer);
+    };
 });
 
 
 let hole6Click = hole6.addEventListener('click', function(){
-    playMancala(boardHoles,12);
-    holeNumRend(boardHoles);
+    if (activePlayer === 2) {
+    mancalaRender = playMancala(boardHoles,12);
+    holeNumRend(mancalaRender.board);
+    checkTurn(mancalaRender.stoppedIndex,activePlayer);
+    changeTurn(activePlayer);
+    };
 });
 
 
 let hole7Click = hole7.addEventListener('click', function(){
-    playMancala(boardHoles,0);
-    holeNumRend(boardHoles);
+    if (activePlayer === 1) {
+    mancalaRender = playMancala(boardHoles,0);
+    holeNumRend(mancalaRender.board);
+    checkTurn(mancalaRender.stoppedIndex,activePlayer);
+    changeTurn(activePlayer);
+    };
 });
 
 
 let hole8Click = hole8.addEventListener('click', function(){
-    playMancala(boardHoles,1);
-    holeNumRend(boardHoles);
+    if (activePlayer === 1) {
+    mancalaRender = playMancala(boardHoles,1);
+    holeNumRend(mancalaRender.board);
+    checkTurn(mancalaRender.stoppedIndex,activePlayer);
+    changeTurn(activePlayer);
+    };
 });
 
 
 let hole9Click = hole9.addEventListener('click', function(){
-    playMancala(boardHoles,2);
-    holeNumRend(boardHoles);
+    if (activePlayer === 1) {
+    mancalaRender = playMancala(boardHoles,2);
+    holeNumRend(mancalaRender.board);
+    checkTurn(mancalaRender.stoppedIndex,activePlayer);
+    changeTurn(activePlayer);
+    };
 });
 
 let hole10Click = hole10.addEventListener('click', function(){
-    playMancala(boardHoles,3);
-    holeNumRend(boardHoles);
+    if (activePlayer === 1) {
+    mancalaRender = playMancala(boardHoles,3);
+    holeNumRend(mancalaRender.board);
+    checkTurn(mancalaRender.stoppedIndex,activePlayer);
+    changeTurn(activePlayer);
+    };
 });
 
 
 let hole11Click = hole11.addEventListener('click', function(){
-    playMancala(boardHoles,4);
-    holeNumRend(boardHoles);
+    if (activePlayer === 1) {
+    mancalaRender = playMancala(boardHoles,4);
+    holeNumRend(mancalaRender.board);
+    checkTurn(mancalaRender.stoppedIndex,activePlayer);
+    changeTurn(activePlayer);
+    };
 });
 
 
 let hole12Click = hole12.addEventListener('click', function(){
-    playMancala(boardHoles,5);
-    holeNumRend(boardHoles);
+    if (activePlayer === 1) {
+    mancalaRender = playMancala(boardHoles,5);
+    holeNumRend(mancalaRender.board);
+    checkTurn(mancalaRender.stoppedIndex,activePlayer);
+    changeTurn(activePlayer);
+    };
 });
  
 let newgameClick = newgamebutton.addEventListener('click', function(){
@@ -103,7 +153,9 @@ let newgameClick = newgamebutton.addEventListener('click', function(){
     holeNumRend(boardHoles);
     mcClearNewGameMessage();
 });
-//test functions //
+
+//test functions // 
+/*
 let player1test = player1container.addEventListener('click', function(){
     turnReset();
     player1Turn();
@@ -112,15 +164,17 @@ let player1test = player1container.addEventListener('click', function(){
 let player2test = player2container.addEventListener('click', function(){
     turnReset();
     player2Turn();
-    });
+    }); 
+    */
+//////////////////////////////////////////
 
 /*----- functions -----*/
 // New Game
 function cleanSlate() {
 boardHoles = [4,4,4,4,4,4,0,4,4,4,4,4,4,0];
 gameWinner = null;
-turnReset();
-player1Turn();
+activePlayer = 1;
+changeTurn(activePlayer);
 return boardHoles, gameWinner;
 };
 
@@ -134,18 +188,31 @@ function keepingScore(x,y) {
 // Move pieces on gameboard
 function playMancala(arr, index) {
     if (index < 0 || index >= arr.length || arr[index] <= 0) {
-        return arr;
-    }
-    const value = arr[index];
-    let remainingValue = value;
-    arr[index] = 0;
-    for (let i = index + 1; i < arr.length && remainingValue > 0; i++) {
-        arr[i]++;
-        remainingValue--;
+        return { board: arr, stoppedIndex: index };
     }
 
-    boardholes = arr;
-    return boardHoles;
+    const value = arr[index];
+    let remainingValue = value;
+
+    // Subtract from the value at the given index
+    arr[index] = 0;
+
+    let lastIndex = index;
+
+    // Iterate forward to add one to subsequent values
+    for (let i = index + 1; remainingValue > 0; i++) {
+        if (i >= arr.length) {
+            i = 0;
+        }
+        if (i === index) {
+            continue;
+        }
+        arr[i]++;
+        remainingValue--;
+        lastIndex = i;
+    }
+
+    return { board: arr, stoppedIndex: lastIndex };
 }
 
 // Play behavior when player is on home side
@@ -210,6 +277,29 @@ function turnReset() {
     player2container.style.background = '#133e7c';
 }
 
+function checkTurn(stoppedOn,playerChk) {
+if (stoppedOn >= 1, stoppedOn <= 6 || stoppedOn >= 7, stoppedOn <=12) {
+    if (playerChk === 1) {
+        activePlayer = 2;
+    } else if (playerChk === 2) {
+        activePlayer = 1;
+    }
+    return activePlayer;
+} else {
+    activePlayer = playerChk;
+    return activePlayer;
+};
+};
+
+function changeTurn(x) {
+    if (x === 1) {
+        return player1Turn();
+    };
+    if (x === 2) {
+        return player2Turn();
+    };
+};
+
 // Calculate a winner
 
 
@@ -234,10 +324,12 @@ function holeNumRend(v) {
         player2container.innerHTML = v[13];
 };
 
+// Game Notifications
+
 function mcClearNewGameMessage() {
     messagecenter.removeChild(freshpage);
 };
 
 function mcDisplay(message) {
     messages.innerHTML= message;
-}
+};
