@@ -131,12 +131,13 @@
     text-align: center;
 } 
 
-.stdholep1 {
+.stdholep1, .stdholep2 {
   border: 3px dashed #00fff9;
   margin: 20px;
   background-color: #133e7c;
   border-radius: 50%;
   color: white;
+  font-size: 60px;
   text-align: center;
 }
 
@@ -170,7 +171,8 @@
     background-color: #133e7c;
     border: 5px solid #ff2975;
     border-radius: 25%;
-    color: white;
+    color: #d4ff32;
+    font-size: 60px;
     text-align: center;
   }
 
@@ -180,7 +182,8 @@
     background-color: #133e7c;
     border: 5px solid #00fff9;
     border-radius: 25%;
-    color: white;
+    color: #d4ff32;
+    font-size: 60px;
     text-align: center;
   }
   
