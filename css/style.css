@@ -33,6 +33,15 @@
     font-family: "Lucida Console", "Courier New", monospace;
   }
 
+  #messagecenter {
+    font-size: 50px;
+    color: #ff2975;
+    background-color: #d4ff32;
+    padding: 0 0 0 0;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-weight: bold;
+  }
+
   #playerz {
     display: flex;
     flex-direction: row;

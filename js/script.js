@@ -6,6 +6,8 @@ let activePlayer;
 let gameWinner;
   
 /*----- cached element references -----*/
+let messagecenter = document.getElementById("messagecenter");
+let freshpage = document.getElementById("freshpage");
 let scorep1 = document.getElementById("p1score");
 let scorep2 = document.getElementById("p2score");
 let hole1 = document.getElementById("hole-1");
@@ -22,12 +24,12 @@ let hole11 = document.getElementById("hole-11");
 let hole12 = document.getElementById("hole-12");
 let player1container = document.getElementById("player-1-container");
 let player2container = document.getElementById("player-2-container");
+let newgamebutton = document.getElementById("newgamebutton");
 
   
 /*----- event listeners -----*/
 let hole1Click = hole1.addEventListener('click', function(){
-cleanSlate();
-holeNumRend(boardHoles);
+
 });
  
 let hole2Click = hole2.addEventListener('click', function(){
@@ -84,13 +86,17 @@ let hole12Click = hole12.addEventListener('click', function(){
 
 });
  
-
+let newgameClick = newgamebutton.addEventListener('click', function(){
+cleanSlate();
+holeNumRend(boardHoles);
+});
 
 /*----- functions -----*/
 // New Game
 function cleanSlate() {
 boardHoles = [4,4,4,4,4,4,0,4,4,4,4,4,4,0];
 gameWinner = null;
+mcNewGameStart();
 return boardHoles, gameWinner;
 
 
@@ -140,5 +146,8 @@ function holeNumRend(v) {
         hole5.innerHTML = v[11];
         hole6.innerHTML = v[12];
         player2container.innerHTML = v[13];
-}
+};
 
+function mcNewGameStart() {
+    messagecenter.removeChild(freshpage);
+};
