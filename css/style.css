@@ -61,60 +61,125 @@
     border-radius: 55px;
     border: 10px solid #d4ff32;
   }
-  
-  .stdhole {
+
+#hole-1 {
+    grid-area: hole1;
     margin: 20px;
     background-color: #133e7c;
     border: 3px dashed #00fff9;
     border-radius: 50%;
-}
-
-#hole-1 {
-    grid-area: hole1;
+    color: white;
+    text-align: center;
 } 
 
 #hole-2 {
     grid-area: hole2;
+    margin: 20px;
+    background-color: #133e7c;
+    border: 3px dashed #00fff9;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
 } 
 
 #hole-3 {
     grid-area: hole3;
+    margin: 20px;
+    background-color: #133e7c;
+    border: 3px dashed #00fff9;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
 } 
 
 #hole-4 {
     grid-area: hole4;
+    margin: 20px;
+    background-color: #133e7c;
+    border: 3px dashed #00fff9;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
 } 
 
 #hole-5 {
     grid-area: hole5;
+    margin: 20px;
+    background-color: #133e7c;
+    border: 3px dashed #00fff9;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
 } 
 
 #hole-6 {
     grid-area: hole6;
+    margin: 20px;
+    background-color: #133e7c;
+    border: 3px dashed #00fff9;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
 } 
 
 #hole-7 {
     grid-area: hole7;
+    margin: 20px;
+    background-color: #133e7c;
+    border: 3px dashed #00fff9;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
 } 
 
 #hole-8 {
     grid-area: hole8;
+    margin: 20px;
+    background-color: #133e7c;
+    border: 3px dashed #00fff9;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
 } 
 
 #hole-9 {
     grid-area: hole9;
+    margin: 20px;
+    background-color: #133e7c;
+    border: 3px dashed #00fff9;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
 } 
 
 #hole-10 {
     grid-area: hole10;
+    margin: 20px;
+    background-color: #133e7c;
+    border: 3px dashed #00fff9;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
 } 
 
 #hole-11 {
     grid-area: hole11;
+    margin: 20px;
+    background-color: #133e7c;
+    border: 3px dashed #00fff9;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
 } 
 
 #hole-12 {
     grid-area: hole12;
+    margin: 20px;
+    background-color: #133e7c;
+    border: 3px dashed #00fff9;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
 } 
 
 #player-1-container {
@@ -123,6 +188,8 @@
     background-color: #133e7c;
     border: 5px solid #ff2975;
     border-radius: 25%;
+    color: white;
+    text-align: center;
   }
 
 #player-2-container {
@@ -131,6 +198,8 @@
     background-color: #133e7c;
     border: 5px solid #ff2975;
     border-radius: 25%;
+    color: white;
+    text-align: center;
   }
   
   #newgamebutton {
@@ -141,4 +210,9 @@
     margin-top: 30px;
     color: #8c1eff;
     outline: none;
+  }
+
+  #newgamebutton:hover {
+    background-color: #8c1eff;
+    color: #ff901f;
   }
