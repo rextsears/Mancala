@@ -26,67 +26,76 @@ let hole12 = document.getElementById("hole-12");
 let player1container = document.getElementById("player-1-container");
 let player2container = document.getElementById("player-2-container");
 let newgamebutton = document.getElementById("newgamebutton");
-//let player1holesCSS = document.getElementByClassName("stdholep1");
-//let player1holes = (hole7, hole8, hole9, hole10, hole11, hole12);
 
   
 /*----- event listeners -----*/
 let hole1Click = hole1.addEventListener('click', function(){
-
+    playMancala(boardHoles,7);
+    holeNumRend(boardHoles);
 });
  
 let hole2Click = hole2.addEventListener('click', function(){
-
+    playMancala(boardHoles,8);
+    holeNumRend(boardHoles);
 });
 
 
 let hole3Click = hole3.addEventListener('click', function(){
-
+    playMancala(boardHoles,9);
+    holeNumRend(boardHoles);
 });
 
 
 let hole4Click = hole4.addEventListener('click', function(){
-
+    playMancala(boardHoles,10);
+    holeNumRend(boardHoles);
 });
 
 
 let hole5Click = hole5.addEventListener('click', function(){
-
+    playMancala(boardHoles,11);
+    holeNumRend(boardHoles);
 });
 
 
 let hole6Click = hole6.addEventListener('click', function(){
-player2Turn();
+    playMancala(boardHoles,12);
+    holeNumRend(boardHoles);
 });
 
 
 let hole7Click = hole7.addEventListener('click', function(){
-player1Turn();
+    playMancala(boardHoles,0);
+    holeNumRend(boardHoles);
 });
 
 
 let hole8Click = hole8.addEventListener('click', function(){
-turnReset();
+    playMancala(boardHoles,1);
+    holeNumRend(boardHoles);
 });
 
 
 let hole9Click = hole9.addEventListener('click', function(){
-
+    playMancala(boardHoles,2);
+    holeNumRend(boardHoles);
 });
 
-
 let hole10Click = hole10.addEventListener('click', function(){
-
+    playMancala(boardHoles,3);
+    holeNumRend(boardHoles);
 });
 
 
 let hole11Click = hole11.addEventListener('click', function(){
-
+    playMancala(boardHoles,4);
+    holeNumRend(boardHoles);
 });
 
 
 let hole12Click = hole12.addEventListener('click', function(){
-
+    playMancala(boardHoles,5);
+    holeNumRend(boardHoles);
 });
  
 let newgameClick = newgamebutton.addEventListener('click', function(){
@@ -112,11 +121,25 @@ function keepingScore(x,y) {
     return scorep1, scorep2;
 }
 
-// Click/Interact with gameboard
-
-
 // Move pieces on gameboard
+function playMancala(arr, index) {
+    if (index < 0 || index >= arr.length || arr[index] <= 0) {
+        return arr;
+    }
+    const value = arr[index];
+    let remainingValue = value;
+    arr[index] = 0;
+    for (let i = index + 1; i < arr.length && remainingValue > 0; i++) {
+        arr[i]++;
+        remainingValue--;
+    }
+    for (let i = index - 1; i >= 0 && remainingValue > 0; i--) {
+        arr[i]--;
+        remainingValue--;
+    }
 
+    return boardHoles = arr;
+}
 
 // Play behavior when player is on home side
 
@@ -127,6 +150,7 @@ function keepingScore(x,y) {
 // Change active player (change turns)
 function player1Turn() {
     mcDisplay("Player 1's Turn");
+    activePlayer = 1;
     hole7.style.border = '7px solid #ff2975';
     hole8.style.border = '7px solid #ff2975';
     hole9.style.border = '7px solid #ff2975';
