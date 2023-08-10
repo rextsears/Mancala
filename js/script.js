@@ -278,18 +278,20 @@ function turnReset() {
 }
 
 function checkTurn(stoppedOn,playerChk) {
-if (stoppedOn >= 1, stoppedOn <= 6 || stoppedOn >= 7, stoppedOn <=12) {
+if (stoppedOn === 6) {
+    activePlayer = playerChk;
+    return activePlayer;
+} else if (stoppedOn === 13) {
+    activePlayer = playerChk;
+    return activePlayer;
+} else {
     if (playerChk === 1) {
         activePlayer = 2;
     } else if (playerChk === 2) {
         activePlayer = 1;
     }
     return activePlayer;
-} else {
-    activePlayer = playerChk;
-    return activePlayer;
-};
-};
+}};
 
 function changeTurn(x) {
     if (x === 1) {
