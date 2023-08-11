@@ -3,9 +3,8 @@
 /*----- app's state (variables) -----*/
 let boardHoles = [];
 let activePlayer;
-let gameWinner;
 let mancalaRender;
-let playIndex;
+let winRender;
   
 /*----- cached element references -----*/
 let messagecenter = document.getElementById("messagecenter");
@@ -33,118 +32,142 @@ let newgamebutton = document.getElementById("newgamebutton");
 /*----- event listeners -----*/
 let hole1Click = hole1.addEventListener('click', function(){
     if (activePlayer = 2) {
-    mancalaRender = playMancala(boardHoles,7);
-    holeNumRend(mancalaRender.board);
-    checkTurn(mancalaRender.stoppedIndex,activePlayer);
-    changeTurn(activePlayer);
+        if (boardHoles[7] > 0) {
+        mancalaRender = playMancala(boardHoles,7);
+        holeNumRend(mancalaRender.board);
+        checkTurn(mancalaRender.stoppedIndex,activePlayer);
+        changeTurn(activePlayer);
+        };
     };
 });
  
 let hole2Click = hole2.addEventListener('click', function(){
     if (activePlayer === 2) {
-    mancalaRender = playMancala(boardHoles,8);
-    holeNumRend(mancalaRender.board);
-    checkTurn(mancalaRender.stoppedIndex,activePlayer);
-    changeTurn(activePlayer);
+        if (boardHoles[8] > 0) {
+        mancalaRender = playMancala(boardHoles,8);
+        holeNumRend(mancalaRender.board);
+        checkTurn(mancalaRender.stoppedIndex,activePlayer);
+        changeTurn(activePlayer);
+    };
     };
 });
 
 
 let hole3Click = hole3.addEventListener('click', function(){
     if (activePlayer === 2) {
-    mancalaRender = playMancala(boardHoles,9);
-    holeNumRend(mancalaRender.board);
-    checkTurn(mancalaRender.stoppedIndex,activePlayer);
-    changeTurn(activePlayer);
+        if (boardHoles[9] > 0) {
+        mancalaRender = playMancala(boardHoles,9);
+        holeNumRend(mancalaRender.board);
+        checkTurn(mancalaRender.stoppedIndex,activePlayer);
+        changeTurn(activePlayer);
+        };
     };
 });
 
 
 let hole4Click = hole4.addEventListener('click', function(){
     if (activePlayer === 2) {
-    mancalaRender = playMancala(boardHoles,10);
-    holeNumRend(mancalaRender.board);
-    checkTurn(mancalaRender.stoppedIndex,activePlayer);
-    changeTurn(activePlayer);
+        if (boardHoles[10] > 0) {
+        mancalaRender = playMancala(boardHoles,10);
+        holeNumRend(mancalaRender.board);
+        checkTurn(mancalaRender.stoppedIndex,activePlayer);
+        changeTurn(activePlayer);
+        };
     };
 });
 
 
 let hole5Click = hole5.addEventListener('click', function(){
     if (activePlayer === 2) {
-    mancalaRender = playMancala(boardHoles,11);
-    holeNumRend(mancalaRender.board);
-    checkTurn(mancalaRender.stoppedIndex,activePlayer);
-    changeTurn(activePlayer);
+        if (boardHoles[11] > 0) {
+        mancalaRender = playMancala(boardHoles,11);
+        holeNumRend(mancalaRender.board);
+        checkTurn(mancalaRender.stoppedIndex,activePlayer);
+        changeTurn(activePlayer);
+    };
     };
 });
 
 
 let hole6Click = hole6.addEventListener('click', function(){
     if (activePlayer === 2) {
-    mancalaRender = playMancala(boardHoles,12);
-    holeNumRend(mancalaRender.board);
-    checkTurn(mancalaRender.stoppedIndex,activePlayer);
-    changeTurn(activePlayer);
+        if (boardHoles[12] > 0) {
+        mancalaRender = playMancala(boardHoles,12);
+        holeNumRend(mancalaRender.board);
+        checkTurn(mancalaRender.stoppedIndex,activePlayer);
+        changeTurn(activePlayer);
+    };
     };
 });
 
 
 let hole7Click = hole7.addEventListener('click', function(){
     if (activePlayer === 1) {
-    mancalaRender = playMancala(boardHoles,0);
-    holeNumRend(mancalaRender.board);
-    checkTurn(mancalaRender.stoppedIndex,activePlayer);
-    changeTurn(activePlayer);
+        if (boardHoles[0] > 0) {
+        mancalaRender = playMancala(boardHoles,0);
+        holeNumRend(mancalaRender.board);
+        checkTurn(mancalaRender.stoppedIndex,activePlayer);
+        changeTurn(activePlayer);
+        };
     };
 });
 
 
 let hole8Click = hole8.addEventListener('click', function(){
     if (activePlayer === 1) {
-    mancalaRender = playMancala(boardHoles,1);
-    holeNumRend(mancalaRender.board);
-    checkTurn(mancalaRender.stoppedIndex,activePlayer);
-    changeTurn(activePlayer);
+        if (boardHoles[1] > 0) {
+        mancalaRender = playMancala(boardHoles,1);
+        holeNumRend(mancalaRender.board);
+        checkTurn(mancalaRender.stoppedIndex,activePlayer);
+        changeTurn(activePlayer);
+        };
     };
 });
 
 
 let hole9Click = hole9.addEventListener('click', function(){
     if (activePlayer === 1) {
-    mancalaRender = playMancala(boardHoles,2);
-    holeNumRend(mancalaRender.board);
-    checkTurn(mancalaRender.stoppedIndex,activePlayer);
-    changeTurn(activePlayer);
+        if (boardHoles[2] > 0) {
+        mancalaRender = playMancala(boardHoles,2);
+        holeNumRend(mancalaRender.board);
+        checkTurn(mancalaRender.stoppedIndex,activePlayer);
+        changeTurn(activePlayer);
+    };
     };
 });
 
 let hole10Click = hole10.addEventListener('click', function(){
     if (activePlayer === 1) {
-    mancalaRender = playMancala(boardHoles,3);
-    holeNumRend(mancalaRender.board);
-    checkTurn(mancalaRender.stoppedIndex,activePlayer);
-    changeTurn(activePlayer);
+        if (boardHoles[3] > 0) {
+        mancalaRender = playMancala(boardHoles,3);
+        holeNumRend(mancalaRender.board);
+        checkTurn(mancalaRender.stoppedIndex,activePlayer);
+        changeTurn(activePlayer);
+    };
     };
 });
 
 
 let hole11Click = hole11.addEventListener('click', function(){
     if (activePlayer === 1) {
-    mancalaRender = playMancala(boardHoles,4);
-    holeNumRend(mancalaRender.board);
-    checkTurn(mancalaRender.stoppedIndex,activePlayer);
-    changeTurn(activePlayer);
+        if (boardHoles[4] > 0) {
+        mancalaRender = playMancala(boardHoles,4);
+        holeNumRend(mancalaRender.board);
+        checkTurn(mancalaRender.stoppedIndex,activePlayer);
+        changeTurn(activePlayer);
+    };
     };
 });
 
 
 let hole12Click = hole12.addEventListener('click', function(){
     if (activePlayer === 1) {
-    mancalaRender = playMancala(boardHoles,5);
-    holeNumRend(mancalaRender.board);
-    checkTurn(mancalaRender.stoppedIndex,activePlayer);
-    changeTurn(activePlayer);
+        if (boardHoles[5] > 0) {
+        mancalaRender = playMancala(boardHoles,5);
+        holeNumRend(mancalaRender.board);
+        checkTurn(mancalaRender.stoppedIndex,activePlayer);
+        changeTurn(activePlayer);
+    };
     };
 });
  
@@ -194,12 +217,9 @@ function playMancala(arr, index) {
     const value = arr[index];
     let remainingValue = value;
 
-    // Subtract from the value at the given index
     arr[index] = 0;
-
     let lastIndex = index;
 
-    // Iterate forward to add one to subsequent values
     for (let i = index + 1; remainingValue > 0; i++) {
         if (i >= arr.length) {
             i = 0;
@@ -213,13 +233,7 @@ function playMancala(arr, index) {
     }
 
     return { board: arr, stoppedIndex: lastIndex };
-}
-
-// Play behavior when player is on home side
-
-
-// Play behavior when player is on away side
-
+};
 
 // Change active player (change turns)
 function player1Turn() {
@@ -303,10 +317,22 @@ function changeTurn(x) {
 };
 
 // Calculate a winner
-
+function calcWin(arr) {
+    if (arr[0,1,2,3,4,5] === 0){
+        return gameWinner = 2;
+    } else if (arr[7,8,9,10,11,12] === 0) {
+        return gameWinner = 1;
+    };
+};
 
 // Display a winner
-
+function gameWinner(winner) {
+if (winner === 1) {
+    mcDisplay("PLAYER 1 WINS!");
+} else if (winner === 2) {
+    mcDisplay("PLAYER 2 WINS!");
+} else {};
+};
 
 // Render gameplay on gameboard
 function holeNumRend(v) {
