@@ -35,8 +35,11 @@ let hole1Click = hole1.addEventListener('click', function(){
         if (boardHoles[7] > 0) {
         mancalaRender = playMancala(boardHoles,7);
         holeNumRend(mancalaRender.board);
+        winRender = calcWin(mancalaRender.board);
+        if (winRender === 0 ) {
         checkTurn(mancalaRender.stoppedIndex,activePlayer);
         changeTurn(activePlayer);
+        };
         };
     };
 });
@@ -46,9 +49,12 @@ let hole2Click = hole2.addEventListener('click', function(){
         if (boardHoles[8] > 0) {
         mancalaRender = playMancala(boardHoles,8);
         holeNumRend(mancalaRender.board);
+        winRender = calcWin(mancalaRender.board);
+        if (winRender === 0 ) {
         checkTurn(mancalaRender.stoppedIndex,activePlayer);
         changeTurn(activePlayer);
-    };
+        };
+        };
     };
 });
 
@@ -58,8 +64,11 @@ let hole3Click = hole3.addEventListener('click', function(){
         if (boardHoles[9] > 0) {
         mancalaRender = playMancala(boardHoles,9);
         holeNumRend(mancalaRender.board);
+        winRender = calcWin(mancalaRender.board);
+        if (winRender === 0 ) {
         checkTurn(mancalaRender.stoppedIndex,activePlayer);
         changeTurn(activePlayer);
+        };
         };
     };
 });
@@ -70,8 +79,11 @@ let hole4Click = hole4.addEventListener('click', function(){
         if (boardHoles[10] > 0) {
         mancalaRender = playMancala(boardHoles,10);
         holeNumRend(mancalaRender.board);
+        winRender = calcWin(mancalaRender.board);
+        if (winRender === 0 ) {
         checkTurn(mancalaRender.stoppedIndex,activePlayer);
         changeTurn(activePlayer);
+        };
         };
     };
 });
@@ -82,9 +94,12 @@ let hole5Click = hole5.addEventListener('click', function(){
         if (boardHoles[11] > 0) {
         mancalaRender = playMancala(boardHoles,11);
         holeNumRend(mancalaRender.board);
+        winRender = calcWin(mancalaRender.board);
+        if (winRender === 0 ) {
         checkTurn(mancalaRender.stoppedIndex,activePlayer);
         changeTurn(activePlayer);
-    };
+        };
+        };
     };
 });
 
@@ -94,9 +109,12 @@ let hole6Click = hole6.addEventListener('click', function(){
         if (boardHoles[12] > 0) {
         mancalaRender = playMancala(boardHoles,12);
         holeNumRend(mancalaRender.board);
+        winRender = calcWin(mancalaRender.board);
+        if (winRender === 0 ) {
         checkTurn(mancalaRender.stoppedIndex,activePlayer);
         changeTurn(activePlayer);
-    };
+        };
+        };
     };
 });
 
@@ -106,8 +124,11 @@ let hole7Click = hole7.addEventListener('click', function(){
         if (boardHoles[0] > 0) {
         mancalaRender = playMancala(boardHoles,0);
         holeNumRend(mancalaRender.board);
+        winRender = calcWin(mancalaRender.board);
+        if (winRender === 0 ) {
         checkTurn(mancalaRender.stoppedIndex,activePlayer);
         changeTurn(activePlayer);
+        };
         };
     };
 });
@@ -118,8 +139,11 @@ let hole8Click = hole8.addEventListener('click', function(){
         if (boardHoles[1] > 0) {
         mancalaRender = playMancala(boardHoles,1);
         holeNumRend(mancalaRender.board);
+        winRender = calcWin(mancalaRender.board);
+        if (winRender === 0 ) {
         checkTurn(mancalaRender.stoppedIndex,activePlayer);
         changeTurn(activePlayer);
+        };
         };
     };
 });
@@ -130,9 +154,12 @@ let hole9Click = hole9.addEventListener('click', function(){
         if (boardHoles[2] > 0) {
         mancalaRender = playMancala(boardHoles,2);
         holeNumRend(mancalaRender.board);
+        winRender = calcWin(mancalaRender.board);
+        if (winRender === 0 ) {
         checkTurn(mancalaRender.stoppedIndex,activePlayer);
         changeTurn(activePlayer);
-    };
+        };
+        };
     };
 });
 
@@ -141,9 +168,12 @@ let hole10Click = hole10.addEventListener('click', function(){
         if (boardHoles[3] > 0) {
         mancalaRender = playMancala(boardHoles,3);
         holeNumRend(mancalaRender.board);
+        winRender = calcWin(mancalaRender.board);
+        if (winRender === 0 ) {
         checkTurn(mancalaRender.stoppedIndex,activePlayer);
         changeTurn(activePlayer);
-    };
+        };
+        };
     };
 });
 
@@ -153,9 +183,12 @@ let hole11Click = hole11.addEventListener('click', function(){
         if (boardHoles[4] > 0) {
         mancalaRender = playMancala(boardHoles,4);
         holeNumRend(mancalaRender.board);
+        winRender = calcWin(mancalaRender.board);
+        if (winRender === 0 ) {
         checkTurn(mancalaRender.stoppedIndex,activePlayer);
         changeTurn(activePlayer);
-    };
+        };
+        };
     };
 });
 
@@ -165,9 +198,12 @@ let hole12Click = hole12.addEventListener('click', function(){
         if (boardHoles[5] > 0) {
         mancalaRender = playMancala(boardHoles,5);
         holeNumRend(mancalaRender.board);
+        winRender = calcWin(mancalaRender.board);
+        if (winRender === 0 ) {
         checkTurn(mancalaRender.stoppedIndex,activePlayer);
         changeTurn(activePlayer);
-    };
+        };
+        };
     };
 });
  
@@ -195,7 +231,7 @@ let player2test = player2container.addEventListener('click', function(){
 // New Game
 function cleanSlate() {
 boardHoles = [4,4,4,4,4,4,0,4,4,4,4,4,4,0];
-gameWinner = null;
+gameWinner = 0;
 activePlayer = 1;
 changeTurn(activePlayer);
 return boardHoles, gameWinner;
@@ -292,20 +328,20 @@ function turnReset() {
 }
 
 function checkTurn(stoppedOn,playerChk) {
-if (stoppedOn === 6) {
-    activePlayer = playerChk;
-    return activePlayer;
-} else if (stoppedOn === 13) {
-    activePlayer = playerChk;
-    return activePlayer;
-} else {
-    if (playerChk === 1) {
-        activePlayer = 2;
-    } else if (playerChk === 2) {
-        activePlayer = 1;
-    }
-    return activePlayer;
-}};
+    if (stoppedOn === 6) {
+        activePlayer = playerChk;
+        return activePlayer;
+    } else if (stoppedOn === 13) {
+        activePlayer = playerChk;
+        return activePlayer;
+    } else {
+        if (playerChk === 1) {
+            activePlayer = 2;
+        } else if (playerChk === 2) {
+            activePlayer = 1;
+        }
+        return activePlayer;
+    }};
 
 function changeTurn(x) {
     if (x === 1) {
@@ -317,22 +353,26 @@ function changeTurn(x) {
 };
 
 // Calculate a winner
+function sumValues(startIndex, endIndex, array) {
+    let sum = 0;
+    for (let i = startIndex; i <= endIndex; i++) {
+      sum += array[i];
+    }
+  
+    return sum;
+};
+  
 function calcWin(arr) {
-    if (arr[0,1,2,3,4,5] === 0){
-        return gameWinner = 2;
-    } else if (arr[7,8,9,10,11,12] === 0) {
-        return gameWinner = 1;
-    };
+    let p1 = sumValues(0,5,arr);
+    let p2 = sumValues(7,12,arr);
+    if (p1 === 0) {
+        mcDisplay("PLAYER 1 WINS!");
+    } else if (p2 === 0) {
+        mcDisplay("PLAYER 2 WINS!");
+    } else {return gameWinner = 0};
 };
 
-// Display a winner
-function gameWinner(winner) {
-if (winner === 1) {
-    mcDisplay("PLAYER 1 WINS!");
-} else if (winner === 2) {
-    mcDisplay("PLAYER 2 WINS!");
-} else {};
-};
+
 
 // Render gameplay on gameboard
 function holeNumRend(v) {
