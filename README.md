@@ -1,4 +1,4 @@
-# Mancala
+![MANCALA](Images/README/MANCALA.png)
 
 ## Overview
 
@@ -21,6 +21,6 @@ Mancala is a two player board game, dating back as far as Ancient Egypt, in whic
 
 ## Wireframes
 
-![Game_board](Wireframes/Game_board.png)
-![Player_1_game_flow](Wireframes/Player_1_game_flow.png)
-![Player_2_game_flow](Wireframes/Player_2_game_flow.png)
+![Game_board](Images/Wireframes/Game_board.png)
+![Player_1_game_flow](Images/Wireframes/Player_1_game_flow.png)
+![Player_2_game_flow](Images/Wireframes/Player_2_game_flow.png)
